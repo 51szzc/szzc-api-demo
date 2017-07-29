@@ -1,0 +1,11 @@
+.DS_Store
+.classpath
+.project
+.springBeans
+.settings/
+target/
+*.iml
+.idea/
+rebel.xml
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
