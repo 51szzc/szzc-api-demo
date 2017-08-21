@@ -1,4 +1,4 @@
-package demo;
+﻿package demo;
 
 import com.alibaba.fastjson.JSON;
 import demo.util.SignHelper;
@@ -13,6 +13,7 @@ import java.util.TreeMap;
 
 /**
  * Created by lx on 17-8-2.
+ * 本demo仅提示用户如何生成签名sign
  */
 public class ApiDemo {
 
@@ -24,7 +25,7 @@ public class ApiDemo {
         map.put("nonce",String.valueOf(System.currentTimeMillis()));
         String sign = SignHelper.getSign(map,secretKey);
         map.put("sign",sign);
-        String result = post("https://www.51szzc.com/api/v1/accountInfo", JSON.toJSONString(map));
+        String result = post("https://www.51szzc.com/api/v1/account_info", JSON.toJSONString(map));
         System.out.println("请求结果：" + result);
     }
 
